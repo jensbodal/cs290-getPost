@@ -1,7 +1,7 @@
 {
   "name": "week7",
   "version": "1.0.0",
-  "description": "",
+  "description": "getPost dependencies",
   "main": "getPost.js",
   "dependencies": {
     "body-parser": "^1.14.1",
@@ -12,6 +12,14 @@
   "scripts": {
     "test": "node getPost.js"
   },
-  "author": "",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jensbodal/cs290-getPost.git"
+  },
+  "author": "Jens Bodal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jensbodal/cs290-getPost/issues"
+  },
+  "homepage": "https://github.com/jensbodal/cs290-getPost#readme"
 }
