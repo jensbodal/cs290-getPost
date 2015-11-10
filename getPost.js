@@ -12,11 +12,14 @@ app.set('view engine', 'handlebars');
 app.set('port', 40000);
 
 app.post('/', function(req, res) {
-    res.render('getPost', getContext('POST', req, true));
+    var context = getContext('POST', req, true);
+    context.isPost = true;
+    res.render('getPost', context);
 });
 
 app.get('/', function(req, res) {
-    res.render('getPost', getContext('GET', req, false));
+    var context = getContext('GET', req, false);
+    res.render('getPost', context);
 });
 
 function getContext(type, req, isPost) {

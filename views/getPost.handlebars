@@ -17,4 +17,18 @@
             {{/each}}
         </tbody>
     </table>
+    {{#if isPost}}
+        <br />
+        <br />
+        <table border=1>
+            <caption style="min-width:500px; font-weight: bold">POST Parameter Names & Values</caption>
+            <thead>
+                <tr>
+                    <th>Parameter Name</th>
+                    <th>Parameter Value</th>
+                </tr>
+                
+            </thead>
+        </table>
+    {{/if}}
 </div>
