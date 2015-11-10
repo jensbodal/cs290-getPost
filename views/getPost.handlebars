@@ -1,8 +1,20 @@
 <div id="getPostDiv">
     <h1>{{type}} Request Received</h1>
-    <ul>
-        {{#each dataList}}
-        <li>{{this.name}}: {{this.value}}</li>
-        {{/each}}
-    </ul>
+    <table border=1>
+        <caption style="min-width:500px; font-weight: bold">Name/Value pairs</caption>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each dataList}}
+            <tr>
+                <td>{{this.name}}</td>
+                <td>{{this.value}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
 </div>
