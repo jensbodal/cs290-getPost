@@ -1,5 +1,9 @@
 <div id="getPostDiv">
-    <h1>{{type}} Request Received</h1>
+    {{#if isPost}}
+        <h1>{{post.type}} Request Received</h1>
+    {{else}}
+        <h1>{{type}} Request Received</h1>
+    {{/if}}
     <table border=1>
         <caption style="min-width:500px; font-weight: bold">Name/Value pairs</caption>
         <thead>
