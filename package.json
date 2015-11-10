@@ -1,0 +1,17 @@
+{
+  "name": "week7",
+  "version": "1.0.0",
+  "description": "",
+  "main": "getPost.js",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "express-handlebars": "^2.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node getPost.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
