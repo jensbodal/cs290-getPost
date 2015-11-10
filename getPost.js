@@ -13,30 +13,31 @@ app.set('view engine', 'handlebars');
 app.set('port', 40000);
 
 app.post('/', function(req, res) {
-    var qParams = [];
-    for (var p in req.body) {
-        qParams.push({'name':p, 'value':req.body[p]});
-    }
-    console.log(qParams);
-    console.log(req.body);
-    var context = {};
-    context.dataList = qParams;
-    context.type = 'POST';
-    res.render('getPost', context);
+    res.render('getPost', getContext('POST', req, true));
 });
 
 app.get('/', function(req, res) {
-    var qParams = [];
-    for (var p in req.query) {
-        qParams.push({'name':p, 'value': req.query[p]});
+    res.render('getPost', getContext('GET', req, false));
+});
+
+function getContext(type, req, isPost) {
+    var params = [];
+    if (isPost) {
+        reqType = req.body;
     }
-    console.log(qParams);
+    else {
+        reqType = req.query;
+    }
+    for (var param in reqType) {
+        params.push({'name':param, 'value': reqType[param]});
+    }
+    console.log(params);
     console.log(req.body);
     var context = {};
-    context.dataList = qParams;
-    context.type = 'GET';
-    res.render('getPost', context);
-});
+    context.params = params;
+    context.type = type;
+    return context;
+}
 
 app.use(function(req,res){
   res.status(404);
