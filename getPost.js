@@ -21,7 +21,8 @@ app.post('/', function(req, res) {
     console.log(req.body);
     var context = {};
     context.dataList = qParams;
-    res.render('post-loopback', context);
+    context.type = 'POST';
+    res.render('getPost', context);
 });
 
 app.get('/', function(req, res) {
@@ -31,7 +32,8 @@ app.get('/', function(req, res) {
     }
     var context = {};
     context.dataList = qParams;
-    res.render('post-loopback', context);
+    context.type = 'GET';
+    res.render('getPost', context);
 });
 
 app.use(function(req,res){

@@ -1,6 +1,8 @@
-<h1>You sent the following data in a POST request</h1>
-<ul>
-    {{#each dataList}}
-    <li>{{this.name}}: {{this.value}}</li>
-    {{/each}}
-</ul>
+<div id="getPostDiv">
+    <h1>{{type}} Request Received</h1>
+    <ul>
+        {{#each dataList}}
+        <li>{{this.name}}: {{this.value}}</li>
+        {{/each}}
+    </ul>
+</div>
