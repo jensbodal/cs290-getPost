@@ -27,8 +27,15 @@
                     <th>Parameter Name</th>
                     <th>Parameter Value</th>
                 </tr>
-                
             </thead>
+            <tbody>
+                {{#each post.params}}
+                <tr>
+                    <td>{{this.name}}</td>
+                    <td>{{this.value}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
         </table>
     {{/if}}
 </div>

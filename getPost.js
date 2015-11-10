@@ -12,7 +12,8 @@ app.set('view engine', 'handlebars');
 app.set('port', 40000);
 
 app.post('/', function(req, res) {
-    var context = getContext('POST', req, true);
+    var context = getContext('GET', req, false);
+    context.post = getContext('POST', req, true);
     context.isPost = true;
     res.render('getPost', context);
 });
